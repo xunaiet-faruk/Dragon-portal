@@ -1,11 +1,13 @@
 import React from 'react';
 import LatestNews from './Navbar/LatestNews';
+import Mainhome from '../Mainhome/Mainhome';
 
 const Home = () => {
     return (
         <div>
-            <LatestNews/>
-            
+           
+            <Mainhome/>
+
         </div>
     );
 };
