@@ -1,4 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import Login from "../../../Authentication/Login";
+import AuthModal from "../../../Authentication/AuthenticateModal";
 
 
 const Navbar = () => {
@@ -12,7 +14,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center justify-center gap-5">
                 <img src='/user.png' alt="" />
-                <button className="btn bg-gray-700 text-white px-8 py-2 font-semibold">Login</button>
+               <AuthModal/>
             </div>
         </div>
     );

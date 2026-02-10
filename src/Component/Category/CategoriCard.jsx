@@ -1,13 +1,16 @@
+import { format, formatDate } from 'date-fns';
 import React, { useState } from 'react';
 import { FaBookmark, FaShareAlt, FaStar, FaEye } from "react-icons/fa";
 const CategoriCard = ({card}) => {
 
     const { author, title, thumbnail_url, details, rating, total_view } = card;
     const [showFull, setShowFull] = useState(false);
+    const publishedDate = new Date(author?.published_date);
+
     return (
         <div>
 
-            <div className="bg-white rounded-xl shadow-md overflow-hidden mb-6">
+            <div className="bg-white shadow-2xl rounded-xl  overflow-hidden mb-6">
 
                 {/* 🔹 Author Bar */}
                 <div className="flex justify-between items-center bg-gray-100 p-4">
@@ -20,7 +23,7 @@ const CategoriCard = ({card}) => {
                         <div className='py-1'>
                             <h4 className="font-semibold text-xl">{author?.name}</h4>
                             <p className="text-sm text-gray-500">
-                                {author.published_date}
+                                <p className="text-gray-500 text-sm text-center"> {format(publishedDate, "PPP")}</p>
                             </p>
                         </div>
                     </div>
