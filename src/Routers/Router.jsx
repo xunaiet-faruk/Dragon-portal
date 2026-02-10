@@ -4,6 +4,7 @@ import {
 import Mainroute from "./Mainroute";
 import Home from "../Component/Home/Home";
 import Mainhome from "../Component/Mainhome/Mainhome";
+import Categorydetails from "../Component/Category/Categorydetails";
 
 
 export const router = createBrowserRouter([
@@ -12,13 +13,24 @@ export const router = createBrowserRouter([
         element: <Mainroute/>,
         children : [
             {
-                index : true,
-                element: <Home/>
-            },
-            {
+              
                 path:'/',
-                element: <Mainhome/>
+                element: <Mainhome/>,
+                children : [
+                    {
+                        index: true,
+                        path: '/',
+                        element: <Categorydetails />
+                    },
+                    {
+                        path: '/categorydtails/:id',
+                        loader :() =>fetch('/news.json'),
+                        element: <Categorydetails />
+                    },
+                ]
             },
+          
+           
         ]
     },
 ]);

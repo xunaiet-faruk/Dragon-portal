@@ -1,3 +1,5 @@
+import { Outlet } from "react-router-dom";
+import Categorydetails from "../Category/Categorydetails";
 import Rightnav from "./rIGHTNAV.JSX";
 import Sidehome from "./Sidehome";
 
@@ -12,7 +14,9 @@ const Mainhome = () => {
                         <Sidehome/>
                     </div>
                 </div>
-                <div className="col-span-7 ">midel</div>
+                <div className="col-span-7 ">
+                    <Outlet/>
+                </div>
                 <div className="col-span-3 ">
                 <Rightnav/>
 

@@ -20,7 +20,7 @@ const [sideSection,setSidsection] =useState([])
                         }`
                     }
 
-                to={`/categori/${item.id}`}>
+                    to={`/categorydtails/${item.id}`}>
                     {item?.name}
                 </NavLink>))
             }
