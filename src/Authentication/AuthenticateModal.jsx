@@ -24,7 +24,7 @@ const AuthModal = () => {
             </button>
 
             <dialog id="auth_modal" className="modal">
-                <div className="modal-box">
+                <div className={`modal-box ${isLogin ? 'bg-gray-300' : 'bg-gray-200'} `}>
                     <form method="dialog">
                         <button className="btn text-red-400 bg-gray-100 btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
